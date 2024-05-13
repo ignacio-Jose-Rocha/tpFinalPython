@@ -6,3 +6,4 @@ class Contacto:
         self.telefono = telefono
         self.email = email
         self.favorito = False
+
