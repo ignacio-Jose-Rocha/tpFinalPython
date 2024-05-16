@@ -62,3 +62,14 @@ class Agenda:
         if not encontrado:
             print("Contacto no encontrado.")
 
+def menu():
+    print("\n1. Agregar contacto")
+    print("2. Mostrar contactos")
+    print("3. Buscar contacto")
+    print("4. Eliminar contacto")
+    print("5. Editar contacto")
+    print("6. Salir")
+
+def main():
+    agenda = Agenda()
+    agenda.cargar_agenda()
