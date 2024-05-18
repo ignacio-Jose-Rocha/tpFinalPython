@@ -20,6 +20,8 @@ class Agenda:
         self.cursor = self.db_connection.cursor()
 
 
+
+
     def mostrar_contactos(self):
         if self.contactos:
             for contacto in self.contactos:
