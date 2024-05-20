@@ -86,6 +86,14 @@ class Agenda:
         if not encontrado:
             print("Contacto no encontrado.")
 
+    def cargar_agenda(self):
+        query = "SELECT nombre, telefono, email, favorito FROM contactos"
+        self.cursor.execute(query)
+        for nombre, telefono, email, favorito in self.cursor.fetchall():
+            contacto = Contacto(nombre, telefono, email)
+            contacto.favorito = favorito
+            self.contactos.append(contacto)
+
 def menu():
     print("\n1. Agregar contacto")
     print("2. Mostrar contactos")
